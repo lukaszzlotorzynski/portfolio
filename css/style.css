@@ -1,0 +1,447 @@
+/* font-family: 'Fira Sans', sans-serif; */
+/* font-family: 'Comfortaa', cursive; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Sekcja Mobile Menu */
+
+nav.mobile {
+    position: fixed;
+    width: 100%;
+    /* height: 55px; */
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 10px 5px #e4e6ea;
+    z-index: 2;
+    opacity: .8;
+}
+
+nav.mobile label {
+    display: inline-block;
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    text-align: right;
+    line-height: 55px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+nav.mobile ul {
+    list-style: none;
+}
+
+#mobile-menu:checked+ul {
+    display: inline-block;
+    position: absolute;
+    width: 170px;
+    height: 210px;
+    top: 45px;
+    right: 0;
+    background-color: #000;
+    text-align: center;
+    line-height: 50px;
+}
+
+nav.mobile i {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+nav.mobile ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+nav.desktop,
+nav.mobile ul,
+input {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    nav.mobile {
+        display: none;
+    }
+
+    nav.desktop {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 65px;
+        top: 0;
+        left: 0;
+        max-width: 1920px;
+        margin: 0 auto;
+        background-color: #000;
+        box-shadow: 0 0 10px gray;
+        z-index: 1;
+        opacity: .8;
+    }
+
+    nav.desktop ul {
+        padding: 20px 0 20px;
+        list-style: none;
+        text-align: right;
+    }
+
+    nav.desktop li {
+        display: inline-block;
+    }
+
+    nav.desktop a {
+        padding: 0 30px;
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    nav.desktop a:hover {
+        /* color: gray; */
+        color: #425568;
+    }
+}
+
+.wrap {
+    position: relative;
+}
+
+/* Sekcja Header */
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 0 10px 5px gray;
+
+}
+
+.header .my-name {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+}
+
+.my-name h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+}
+
+.my-name h2 {
+    font-size: 20px;
+}
+
+@media (orientation: landscape) {
+    .my-name {
+        transform: translate(-50%, -50%);
+    }
+
+    .my-name h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (min-width: 360px) {
+    .my-name h1 {
+        font-size: 37px;
+
+    }
+
+    .my-name h2 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .my-name h1 {
+        font-size: 60px;
+    }
+
+    .my-name h2 {
+        font-size: 40px;
+    }
+
+}
+
+/* Sekcja O MNIE */
+/* #about { */
+/* text-align: center; */
+/* } */
+
+h1.section-h1 {
+    padding: 50px 0 50px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    background-color: #fff;
+}
+
+.about-me {
+    padding: 20px 0 20px 0;
+    background-color: #eee;
+}
+
+
+.about-me .image img {
+    margin: 35px auto;
+    width: 280px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 1px black;
+    opacity: 0.9;
+}
+
+.about-me .bio {
+    margin: 15px auto;
+    padding: 0 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.about-me .bio p {
+    text-indent: 8%;
+    line-height: 140%;
+}
+
+@media (min-width: 1025px) {
+    .about-me {
+        padding: 60px 40px;
+    }
+
+    .about-me .image {
+
+        float: left;
+        width: 40%;
+    }
+
+    .about-me .image img {
+        width: 300px;
+    }
+
+    .about-me .bio {
+        float: left;
+        width: 55%;
+    }
+
+
+    .bio p {
+        margin-top: 20px;
+        margin-right: 50px;
+        text-indent: 1.5em;
+        line-height: 30px;
+    }
+
+}
+
+/* SEKCJA UMIEJĘTNOŚCI  */
+
+#skills {
+    border-bottom: 1px solid #e4e6ea;
+}
+
+.skills-icons {
+    text-align: center;
+}
+
+figure {
+    display: inline-block;
+    padding: 0 30px;
+    margin-bottom: 80px;
+}
+
+figure img {
+    width: 100px;
+    height: 100px;
+}
+
+/* SEKCJA PROJEKTY portfolio */
+
+.portfolio-gallery {
+    padding-bottom: 100px;
+    border-bottom: 1px solid #e4e6ea;
+}
+
+.gallery {
+
+    width: 90%;
+    margin: 10px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#pf1.gallery {
+    background-image: url("../img/pf-img-1.jpg");
+}
+
+#pf2.gallery {
+    background-image: url("../img/pf-img-1.jpg");
+}
+
+#pf3.gallery {
+    background-image: url("../img/pf-img-1.jpg");
+}
+
+#pf4.gallery {
+    background-image: url("../img/pf-img-1.jpg");
+}
+
+.pf-mask {
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(161, 158, 158, 0.8);
+    /* opacity: 0; */
+    transition-duration: .7s;
+}
+
+.pf-border {
+    position: relative;
+    height: 100%;
+    border: 1px solid #ffffff;
+}
+
+.pf-txt {
+    text-align: center;
+    margin: 10px auto;
+    /* color: #ffffff; */
+}
+
+.pf-mask:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fa-share-square {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.fa-share-square:hover {
+    color: black;
+}
+
+@media (orientation: landscape) {
+
+    .gallery {
+
+        width: 80%;
+        height: 100%;
+        margin: 10px auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+}
+
+/* sekcja kontakt */
+
+#contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../img/contact-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.contact-container {
+    margin: 50px 20px;
+    font-size: 18px;
+    color: #ccc;
+    text-align: left;
+}
+
+.contact-container h1 {
+    margin: 20px;
+}
+
+.contact-container p {
+    margin-left: 15px;
+    line-height: 180%;
+}
+
+.contact-container p>i {
+    padding: 0 10px;
+}
+
+.contact-container p a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.form-container {
+    padding-bottom: 50px;
+}
+
+form input,
+textarea {
+    margin: 15px auto;
+    text-align: center;
+    display: block;
+    width: 80%;
+    height: 40px;
+    border: 0;
+    border-radius: 3px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+textarea {
+    padding: 15px;
+    height: 200px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.button {
+    width: 70%;
+    height: 50px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: rgba(161, 158, 158, 0.8);
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
