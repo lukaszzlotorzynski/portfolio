@@ -227,7 +227,7 @@ h1.section-h1 {
     margin: 15px auto;
     padding: 0 20px;
     font-size: 20px;
-    text-align: justify;
+    text-align: left;
 }
 
 .about-me .bio p {
