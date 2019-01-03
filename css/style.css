@@ -163,17 +163,6 @@ input {
     font-size: 20px;
 }
 
-@media (orientation: landscape) {
-    .my-name {
-        transform: translate(-50%, -50%);
-    }
-
-    .my-name h1 {
-        font-size: 40px;
-    }
-
-}
-
 @media (min-width: 360px) {
     .my-name h1 {
         font-size: 37px;
@@ -196,10 +185,18 @@ input {
 
 }
 
+@media (orientation: landscape) {
+    .header .my-name {
+        transform: translate(-50%, -35%);
+    }
+
+    .my-name h1 {
+        font-size: 40px;
+    }
+
+}
+
 /* Sekcja O MNIE */
-/* #about { */
-/* text-align: center; */
-/* } */
 
 h1.section-h1 {
     padding: 50px 0 50px;
@@ -233,6 +230,7 @@ h1.section-h1 {
 .about-me .bio p {
     text-indent: 8%;
     line-height: 140%;
+    text-shadow: 2px 2px 2px #fff;
 }
 
 @media (min-width: 1025px) {
@@ -435,6 +433,13 @@ textarea:focus {
     margin-top: 20px;
     text-transform: uppercase;
     background-color: #a19e9e;
+}
+
+@media (orientation: landscape) {
+    .contact-container {
+        margin: 50px;
+        text-align: left;
+    }
 }
 
 /* footer */
