@@ -153,7 +153,7 @@ input {
     box-shadow: 0 0 10px 5px gray;
 }
 
-.my-name {
+.header-inner {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -164,7 +164,7 @@ input {
     font-family: 'Comfortaa', cursive;
 }
 
-.my-name h1 {
+.header-inner h1 {
     text-transform: uppercase;
     font-size: 30px;
     letter-spacing: 3px;
@@ -172,38 +172,46 @@ input {
     margin-bottom: 10px;
 }
 
-.my-name h2 {
+.header-inner h2 {
     font-size: 20px;
 }
 
 @media (orientation: portrait) and (min-width: 360px) {
-    .my-name h1 {
+    .header-inner h1 {
         font-size: 37px;
     }
 
-    .my-name h2 {
+    .header-inner h2 {
         font-size: 20px;
     }
 }
 
 @media (orientation: portrait) and (min-width: 1025px) {
-    .my-name h1 {
+    .header-inner h1 {
         font-size: 70px;
     }
 
-    .my-name h2 {
-        font-size: 40px;
+    .header-inner h2 {
+        font-size: 70px;
     }
 
 }
 
-@media (orientation: landscape) {
-    .header .my-name {
+@media (orientation: landscape) and (min-width: 1025px) {
+    #header {
+        background-attachment: fixed;
+    }
+
+    .header-inner {
         transform: translate(-50%, -35%);
     }
 
-    .my-name h1 {
-        font-size: 40px;
+    .header-inner h1 {
+        font-size: 70px;
+    }
+
+    .header-inner h2 {
+        font-size: 35px;
     }
 
 }
@@ -364,19 +372,30 @@ figure img {
     color: black;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 1025px) {
+
 
     .gallery {
-
-        width: 80%;
-        height: 100%;
-        margin: 10px auto;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        margin: 0 20px;
+        float: left;
+        width: 22.3%;
+        height: 350px;
 
     }
 
+    .pf-mask {
+        /* height: 100%; */
+        /* padding: 10px; */
+        /* background-color: rgba(161, 158, 158, 0.8); */
+        opacity: 0;
+        transition-duration: .7s;
+    }
+
+    .pf-txt {
+        margin: 50px auto;
+    }
+
+    /* .pf-txt h1 {} */
 }
 
 /* sekcja kontakt */
@@ -443,17 +462,47 @@ textarea:focus {
 }
 
 .button {
-    width: 70%;
+    width: 80%;
     height: 50px;
     margin-top: 20px;
     text-transform: uppercase;
     background-color: #a19e9e;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 1025px) {
+
+    .container {
+        max-width: 1024px;
+        margin: 100px auto 0;
+    }
+
     .contact-container {
-        margin: 50px;
-        text-align: left;
+        float: left;
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    .contact-container h1 {
+
+        font-size: 35px;
+    }
+
+    .form-container {
+        float: left;
+        width: 45%;
+    }
+
+    form input,
+    textarea {
+        width: 100%;
+    }
+
+    .button {
+        /* width: 20%; */
+        height: 50px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        background-color: #a19e9e;
     }
 }
 
