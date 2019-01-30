@@ -10,6 +10,7 @@
 
 html {
     font-family: 'Fira Sans', sans-serif;
+    /* font-family: 'Comfortaa', cursive; */
     text-align: center;
 }
 
@@ -303,6 +304,11 @@ figure img {
     width: 100px;
     height: 100px;
     box-shadow: 0px 0px 1px black;
+    transition: .5s;
+}
+
+figure img:hover {
+    transform: rotate(360deg);
 }
 
 /* SEKCJA PROJEKTY portfolio */
@@ -313,7 +319,6 @@ figure img {
 }
 
 .gallery {
-
     width: 90%;
     margin: 10px auto;
     background-position: center;
@@ -323,6 +328,10 @@ figure img {
 }
 
 #pf1.gallery {
+    background-image: url("../img/pf-img-1.jpg");
+}
+
+#pf1.gallery:hover {
     background-image: url("../img/pf-img-1.jpg");
 }
 
@@ -343,7 +352,7 @@ figure img {
     padding: 10px;
     background-color: rgba(161, 158, 158, 0.8);
     /* opacity: 0; */
-    transition-duration: .7s;
+    transition-duration: .4s;
 }
 
 .pf-border {
